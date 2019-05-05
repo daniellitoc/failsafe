@@ -643,7 +643,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <li class="blockList">
 <h4>onAbort</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="class in net.jodah.failsafe">RetryPolicy</a>&lt;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="type parameter in RetryPolicy">R</a>&gt;&nbsp;onAbort(<a href="../../../net/jodah/failsafe/function/CheckedConsumer.html" title="interface in net.jodah.failsafe.function">CheckedConsumer</a>&lt;? extends <a href="../../../net/jodah/failsafe/event/ExecutionCompletedEvent.html" title="class in net.jodah.failsafe.event">ExecutionCompletedEvent</a>&lt;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="type parameter in RetryPolicy">R</a>&gt;&gt;&nbsp;listener)</pre>
-<div class="block">Registers the <code>listener</code> to be called when an execution is aborted.</div>
+<div class="block">Registers the <code>listener</code> to be called when an execution is aborted.
+ <p>Note: Any exceptions that are thrown from within the <code>listener</code> are ignored.</p></div>
 </li>
 </ul>
 <a name="onFailedAttempt-net.jodah.failsafe.function.CheckedConsumer-">
@@ -653,7 +654,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <li class="blockList">
 <h4>onFailedAttempt</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="class in net.jodah.failsafe">RetryPolicy</a>&lt;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="type parameter in RetryPolicy">R</a>&gt;&nbsp;onFailedAttempt(<a href="../../../net/jodah/failsafe/function/CheckedConsumer.html" title="interface in net.jodah.failsafe.function">CheckedConsumer</a>&lt;? extends <a href="../../../net/jodah/failsafe/event/ExecutionAttemptedEvent.html" title="class in net.jodah.failsafe.event">ExecutionAttemptedEvent</a>&lt;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="type parameter in RetryPolicy">R</a>&gt;&gt;&nbsp;listener)</pre>
-<div class="block">Registers the <code>listener</code> to be called when an execution attempt fails.</div>
+<div class="block">Registers the <code>listener</code> to be called when an execution attempt fails.
+ <p>Note: Any exceptions that are thrown from within the <code>listener</code> are ignored.</p></div>
 </li>
 </ul>
 <a name="onRetriesExceeded-net.jodah.failsafe.function.CheckedConsumer-">
@@ -663,7 +665,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <li class="blockList">
 <h4>onRetriesExceeded</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="class in net.jodah.failsafe">RetryPolicy</a>&lt;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="type parameter in RetryPolicy">R</a>&gt;&nbsp;onRetriesExceeded(<a href="../../../net/jodah/failsafe/function/CheckedConsumer.html" title="interface in net.jodah.failsafe.function">CheckedConsumer</a>&lt;? extends <a href="../../../net/jodah/failsafe/event/ExecutionCompletedEvent.html" title="class in net.jodah.failsafe.event">ExecutionCompletedEvent</a>&lt;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="type parameter in RetryPolicy">R</a>&gt;&gt;&nbsp;listener)</pre>
-<div class="block">Registers the <code>listener</code> to be called when an execution fails and the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxRetries-int-"><code>max retry attempts</code></a> or <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>max duration</code></a> are exceeded.</div>
+<div class="block">Registers the <code>listener</code> to be called when an execution fails and the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxRetries-int-"><code>max retry attempts</code></a> or <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>max duration</code></a> are exceeded.
+ <p>Note: Any exceptions that are thrown from within the <code>listener</code> are ignored.</p></div>
 </li>
 </ul>
 <a name="onRetry-net.jodah.failsafe.function.CheckedConsumer-">
@@ -673,7 +676,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <li class="blockList">
 <h4>onRetry</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="class in net.jodah.failsafe">RetryPolicy</a>&lt;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="type parameter in RetryPolicy">R</a>&gt;&nbsp;onRetry(<a href="../../../net/jodah/failsafe/function/CheckedConsumer.html" title="interface in net.jodah.failsafe.function">CheckedConsumer</a>&lt;? extends <a href="../../../net/jodah/failsafe/event/ExecutionAttemptedEvent.html" title="class in net.jodah.failsafe.event">ExecutionAttemptedEvent</a>&lt;<a href="../../../net/jodah/failsafe/RetryPolicy.html" title="type parameter in RetryPolicy">R</a>&gt;&gt;&nbsp;listener)</pre>
-<div class="block">Registers the <code>listener</code> to be called before an execution is retried.</div>
+<div class="block">Registers the <code>listener</code> to be called before an execution is retried.
+ <p>Note: Any exceptions that are thrown from within the <code>listener</code> are ignored.</p></div>
 </li>
 </ul>
 <a name="canApplyDelayFn-java.lang.Object-java.lang.Throwable-">
@@ -882,7 +886,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>chronoUnit</code> is null</dd>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>delay</code> is <= 0 or <code>delay</code> is >= <code>maxDelay</code></dd>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>delay</code> is >= the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>maxDuration</code></a>, if delays have already been set, or if random delays have already been set</dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>delay</code> is >= the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>maxDuration</code></a>,
+ if delays have already been set, or if random delays have already been set</dd>
 </dl>
 </li>
 </ul>
@@ -902,7 +907,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>chronoUnit</code> is null</dd>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>delay</code> <= 0, <code>delay</code> is >= <code>maxDelay</code>, or the <code>delayFactor</code> is <= 1</dd>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>delay</code> is >= the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>maxDuration</code></a>, if delays have already been set, or if random delays have already been set</dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>delay</code> is >= the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>maxDuration</code></a>,
+ if delays have already been set, or if random delays have already been set</dd>
 </dl>
 </li>
 </ul>
@@ -918,7 +924,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>chronoUnit</code> is null</dd>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>delay</code> <= 0</dd>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>delay</code> is >= the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>maxDuration</code></a>, if random delays have already been set, or if backoff delays have already been set</dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>delay</code> is >= the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>maxDuration</code></a>,
+ if random delays have already been set, or if backoff delays have already been set</dd>
 </dl>
 </li>
 </ul>
@@ -935,8 +942,7 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>chronoUnit</code> is null</dd>
-<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>delayMin</code> or <code>delayMax</code> are <= 0, or <code>delayMin</code> >=
-     <code>delayMax</code></dd>
+<dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>delayMin</code> or <code>delayMax</code> are <= 0, or <code>delayMin</code> >= <code>delayMax</code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if <code>delayMax</code> is >= the <a href="../../../net/jodah/failsafe/RetryPolicy.html#withMaxDuration-java.time.Duration-"><code>maxDuration</code></a>, if delays have already been set, if backoff delays have already been set</dd>
 </dl>
 </li>
@@ -1022,7 +1028,7 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>jitterFactor</code> is < 0 or > 1</dd>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if no delay has been configured or <a href="../../../net/jodah/failsafe/RetryPolicy.html#withJitter-java.time.Duration-"><code>withJitter(Duration)</code></a> has already been
-     called</dd>
+ called</dd>
 </dl>
 </li>
 </ul>
@@ -1042,7 +1048,7 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>jitter</code> is null</dd>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>jitter</code> is <= 0</dd>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if no delay has been configured or <a href="../../../net/jodah/failsafe/RetryPolicy.html#withJitter-double-"><code>withJitter(double)</code></a> has already been
-     called</dd>
+ called</dd>
 </dl>
 </li>
 </ul>

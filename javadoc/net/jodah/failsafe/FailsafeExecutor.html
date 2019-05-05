@@ -387,7 +387,8 @@ extends <a href="../../../net/jodah/failsafe/PolicyListeners.html" title="class 
 <h4>onComplete</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="class in net.jodah.failsafe">FailsafeExecutor</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;&nbsp;onComplete(<a href="../../../net/jodah/failsafe/function/CheckedConsumer.html" title="interface in net.jodah.failsafe.function">CheckedConsumer</a>&lt;? extends <a href="../../../net/jodah/failsafe/event/ExecutionCompletedEvent.html" title="class in net.jodah.failsafe.event">ExecutionCompletedEvent</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;&gt;&nbsp;listener)</pre>
 <div class="block">Registers the <code>listener</code> to be called when an execution is complete for all of the configured policies are
- exceeded.</div>
+ exceeded.
+ <p>Note: Any exceptions that are thrown from within the <code>listener</code> are ignored.</p></div>
 </li>
 </ul>
 <a name="onFailure-net.jodah.failsafe.function.CheckedConsumer-">
@@ -398,7 +399,8 @@ extends <a href="../../../net/jodah/failsafe/PolicyListeners.html" title="class 
 <h4>onFailure</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="class in net.jodah.failsafe">FailsafeExecutor</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;&nbsp;onFailure(<a href="../../../net/jodah/failsafe/function/CheckedConsumer.html" title="interface in net.jodah.failsafe.function">CheckedConsumer</a>&lt;? extends <a href="../../../net/jodah/failsafe/event/ExecutionCompletedEvent.html" title="class in net.jodah.failsafe.event">ExecutionCompletedEvent</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;&gt;&nbsp;listener)</pre>
 <div class="block">Registers the <code>listener</code> to be called when an execution fails. If multiple policies, are configured, this
- handler is called when execution is complete and <i>any</i> policy fails.</div>
+ handler is called when execution is complete and <i>any</i> policy fails.
+ <p>Note: Any exceptions that are thrown from within the <code>listener</code> are ignored.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../net/jodah/failsafe/PolicyListeners.html#onFailure-net.jodah.failsafe.function.CheckedConsumer-">onFailure</a></code>&nbsp;in class&nbsp;<code><a href="../../../net/jodah/failsafe/PolicyListeners.html" title="class in net.jodah.failsafe">PolicyListeners</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="class in net.jodah.failsafe">FailsafeExecutor</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;,<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;</code></dd>
@@ -414,7 +416,8 @@ extends <a href="../../../net/jodah/failsafe/PolicyListeners.html" title="class 
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="class in net.jodah.failsafe">FailsafeExecutor</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;&nbsp;onSuccess(<a href="../../../net/jodah/failsafe/function/CheckedConsumer.html" title="interface in net.jodah.failsafe.function">CheckedConsumer</a>&lt;? extends <a href="../../../net/jodah/failsafe/event/ExecutionCompletedEvent.html" title="class in net.jodah.failsafe.event">ExecutionCompletedEvent</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;&gt;&nbsp;listener)</pre>
 <div class="block">Registers the <code>listener</code> to be called when an execution is successful. If multiple policies, are configured,
  this handler is called when execution is complete and <i>all</i> policies succeed. If <i>all</i> policies do not
- succeed, then the <a href="../../../net/jodah/failsafe/FailsafeExecutor.html#onFailure-net.jodah.failsafe.function.CheckedConsumer-"><code>onFailure(CheckedConsumer)</code></a> registered listener is called instead.</div>
+ succeed, then the <a href="../../../net/jodah/failsafe/FailsafeExecutor.html#onFailure-net.jodah.failsafe.function.CheckedConsumer-"><code>onFailure(CheckedConsumer)</code></a> registered listener is called instead.
+ <p>Note: Any exceptions that are thrown from within the <code>listener</code> are ignored.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../net/jodah/failsafe/PolicyListeners.html#onSuccess-net.jodah.failsafe.function.CheckedConsumer-">onSuccess</a></code>&nbsp;in class&nbsp;<code><a href="../../../net/jodah/failsafe/PolicyListeners.html" title="class in net.jodah.failsafe">PolicyListeners</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="class in net.jodah.failsafe">FailsafeExecutor</a>&lt;<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;,<a href="../../../net/jodah/failsafe/FailsafeExecutor.html" title="type parameter in FailsafeExecutor">R</a>&gt;</code></dd>

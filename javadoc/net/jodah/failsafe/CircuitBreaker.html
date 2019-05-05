@@ -628,7 +628,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <li class="blockList">
 <h4>onClose</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/CircuitBreaker.html" title="class in net.jodah.failsafe">CircuitBreaker</a>&lt;<a href="../../../net/jodah/failsafe/CircuitBreaker.html" title="type parameter in CircuitBreaker">R</a>&gt;&nbsp;onClose(<a href="../../../net/jodah/failsafe/function/CheckedRunnable.html" title="interface in net.jodah.failsafe.function">CheckedRunnable</a>&nbsp;runnable)</pre>
-<div class="block">Calls the <code>runnable</code> when the circuit is closed.</div>
+<div class="block">Calls the <code>runnable</code> when the circuit is closed.
+ <p>Note: Any exceptions that are thrown from within the <code>runnable</code> are ignored.</p></div>
 </li>
 </ul>
 <a name="onHalfOpen-net.jodah.failsafe.function.CheckedRunnable-">
@@ -638,7 +639,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <li class="blockList">
 <h4>onHalfOpen</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/CircuitBreaker.html" title="class in net.jodah.failsafe">CircuitBreaker</a>&lt;<a href="../../../net/jodah/failsafe/CircuitBreaker.html" title="type parameter in CircuitBreaker">R</a>&gt;&nbsp;onHalfOpen(<a href="../../../net/jodah/failsafe/function/CheckedRunnable.html" title="interface in net.jodah.failsafe.function">CheckedRunnable</a>&nbsp;runnable)</pre>
-<div class="block">Calls the <code>runnable</code> when the circuit is half-opened.</div>
+<div class="block">Calls the <code>runnable</code> when the circuit is half-opened.
+ <p>Note: Any exceptions that are thrown within the <code>runnable</code> are ignored.</p></div>
 </li>
 </ul>
 <a name="onOpen-net.jodah.failsafe.function.CheckedRunnable-">
@@ -648,7 +650,8 @@ extends <a href="../../../net/jodah/failsafe/FailurePolicy.html" title="class in
 <li class="blockList">
 <h4>onOpen</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/CircuitBreaker.html" title="class in net.jodah.failsafe">CircuitBreaker</a>&lt;<a href="../../../net/jodah/failsafe/CircuitBreaker.html" title="type parameter in CircuitBreaker">R</a>&gt;&nbsp;onOpen(<a href="../../../net/jodah/failsafe/function/CheckedRunnable.html" title="interface in net.jodah.failsafe.function">CheckedRunnable</a>&nbsp;runnable)</pre>
-<div class="block">Calls the <code>runnable</code> when the circuit is opened.</div>
+<div class="block">Calls the <code>runnable</code> when the circuit is opened.
+ <p>Note: Any exceptions that are thrown within the <code>runnable</code> are ignored.</p></div>
 </li>
 </ul>
 <a name="open--">
