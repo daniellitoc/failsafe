@@ -559,15 +559,15 @@
 </dd>
 <dt><span class="memberNameLink"><a href="net/jodah/failsafe/FailurePolicy.html#handle-java.lang.Class-">handle(Class&lt;? extends Throwable&gt;)</a></span> - Method in class net.jodah.failsafe.<a href="net/jodah/failsafe/FailurePolicy.html" title="class in net.jodah.failsafe">FailurePolicy</a></dt>
 <dd>
-<div class="block">Specifies the failure to retryOn.</div>
+<div class="block">Specifies the failure to handle.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/jodah/failsafe/FailurePolicy.html#handle-java.lang.Class...-">handle(Class&lt;? extends Throwable&gt;...)</a></span> - Method in class net.jodah.failsafe.<a href="net/jodah/failsafe/FailurePolicy.html" title="class in net.jodah.failsafe">FailurePolicy</a></dt>
 <dd>
-<div class="block">Specifies the failures to retryOn.</div>
+<div class="block">Specifies the failures to handle.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/jodah/failsafe/FailurePolicy.html#handle-java.util.List-">handle(List&lt;Class&lt;? extends Throwable&gt;&gt;)</a></span> - Method in class net.jodah.failsafe.<a href="net/jodah/failsafe/FailurePolicy.html" title="class in net.jodah.failsafe">FailurePolicy</a></dt>
 <dd>
-<div class="block">Specifies the failures to retryOn.</div>
+<div class="block">Specifies the failures to handle.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/jodah/failsafe/FailurePolicy.html#handleIf-java.util.function.Predicate-">handleIf(Predicate&lt;? extends Throwable&gt;)</a></span> - Method in class net.jodah.failsafe.<a href="net/jodah/failsafe/FailurePolicy.html" title="class in net.jodah.failsafe">FailurePolicy</a></dt>
 <dd>
@@ -993,6 +993,10 @@ the order they are declared.</div>
 <div class="block">Returns a copy of the ExecutionResult with the <code>waitNanos</code>, <code>completed</code> and <code>success</code> values.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="net/jodah/failsafe/Failsafe.html#with-P...-">with(P...)</a></span> - Static method in class net.jodah.failsafe.<a href="net/jodah/failsafe/Failsafe.html" title="class in net.jodah.failsafe">Failsafe</a></dt>
+<dd>
+<div class="block">Creates and returns a new <a href="net/jodah/failsafe/FailsafeExecutor.html" title="class in net.jodah.failsafe"><code>FailsafeExecutor</code></a> instance that will handle failures according to the given <code>policies</code>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="net/jodah/failsafe/Failsafe.html#with-java.util.List-">with(List&lt;? extends Policy&lt;R&gt;&gt;)</a></span> - Static method in class net.jodah.failsafe.<a href="net/jodah/failsafe/Failsafe.html" title="class in net.jodah.failsafe">Failsafe</a></dt>
 <dd>
 <div class="block">Creates and returns a new <a href="net/jodah/failsafe/FailsafeExecutor.html" title="class in net.jodah.failsafe"><code>FailsafeExecutor</code></a> instance that will handle failures according to the given <code>policies</code>.</div>
 </dd>

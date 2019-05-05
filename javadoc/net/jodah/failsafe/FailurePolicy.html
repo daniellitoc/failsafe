@@ -158,19 +158,19 @@ implements <a href="../../../net/jodah/failsafe/Policy.html" title="interface in
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../net/jodah/failsafe/FailurePolicy.html" title="type parameter in FailurePolicy">S</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../net/jodah/failsafe/FailurePolicy.html#handle-java.lang.Class...-">handle</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;...&nbsp;failures)</code>
-<div class="block">Specifies the failures to retryOn.</div>
+<div class="block">Specifies the failures to handle.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../net/jodah/failsafe/FailurePolicy.html" title="type parameter in FailurePolicy">S</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../net/jodah/failsafe/FailurePolicy.html#handle-java.lang.Class-">handle</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;&nbsp;failure)</code>
-<div class="block">Specifies the failure to retryOn.</div>
+<div class="block">Specifies the failure to handle.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../net/jodah/failsafe/FailurePolicy.html" title="type parameter in FailurePolicy">S</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../net/jodah/failsafe/FailurePolicy.html#handle-java.util.List-">handle</a></span>(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;&gt;&nbsp;failures)</code>
-<div class="block">Specifies the failures to retryOn.</div>
+<div class="block">Specifies the failures to handle.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -247,7 +247,7 @@ implements <a href="../../../net/jodah/failsafe/Policy.html" title="interface in
 <li class="blockList">
 <h4>handle</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/FailurePolicy.html" title="type parameter in FailurePolicy">S</a>&nbsp;handle(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;&nbsp;failure)</pre>
-<div class="block">Specifies the failure to retryOn. Any failure that is assignable from the <code>failure</code> will be handled.</div>
+<div class="block">Specifies the failure to handle. Any failure that is assignable from the <code>failure</code> will be handled.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>failure</code> is null</dd>
@@ -261,7 +261,7 @@ implements <a href="../../../net/jodah/failsafe/Policy.html" title="interface in
 <li class="blockList">
 <h4>handle</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/FailurePolicy.html" title="type parameter in FailurePolicy">S</a>&nbsp;handle(<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;...&nbsp;failures)</pre>
-<div class="block">Specifies the failures to retryOn. Any failures that are assignable from the <code>failures</code> will be handled.</div>
+<div class="block">Specifies the failures to handle. Any failures that are assignable from the <code>failures</code> will be handled.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>failures</code> is null</dd>
@@ -276,7 +276,7 @@ implements <a href="../../../net/jodah/failsafe/Policy.html" title="interface in
 <li class="blockList">
 <h4>handle</h4>
 <pre>public&nbsp;<a href="../../../net/jodah/failsafe/FailurePolicy.html" title="type parameter in FailurePolicy">S</a>&nbsp;handle(<a href="http://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&gt;&gt;&nbsp;failures)</pre>
-<div class="block">Specifies the failures to retryOn. Any failures that are assignable from the <code>failures</code> will be handled.</div>
+<div class="block">Specifies the failures to handle. Any failures that are assignable from the <code>failures</code> will be handled.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>failures</code> is null</dd>
